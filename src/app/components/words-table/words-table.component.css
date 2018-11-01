@@ -1,0 +1,78 @@
+
+table {
+    width: 100%;
+    height: 80%;
+  
+    border-collapse: separate;
+    border-spacing: 15px;    
+}
+td{     
+    text-align: center;   
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+  /* ESTOS SON LOS COLORES DE FONDO PARA PALABRAS REVELADAS */
+#bgColor0{
+  background-color: #dfdfdf;
+}
+#bgColor1{
+  background-color: #e8e2be;
+}
+#bgColor2{
+  background-color:#222222;
+  color:white;
+} 
+#bgColor3{
+    background-color:#437cd8;
+    color:white;
+  }
+  #bgColor4{
+    background-color: #bf2828;
+    color:white;
+  }
+  #bgColor5{
+    background-color: #32893d;
+    color:white;
+  }
+  #bgColor6{
+    background-color: #d67cbe;
+    color:white;
+  }
+  #bgColor7{
+    background-color: #cc7d00;
+    color:white;
+  }
+
+
+  /* ESTOS SON LOS COLORES DE LETRAS PARA EL MASTER */
+#bgColor100{
+  background-color: #dfdfdf;
+}
+#bgColor101{
+  background-color: #dfdfdf;
+}
+#bgColor102{
+  background-color:#aaaaaa;
+} 
+
+ #bgColor103{   
+  background-color: #dfdfdf;
+  color:#437cd8;
+  }
+  #bgColor104{
+    background-color: #dfdfdf;
+    color:#bf2828;
+  }
+  #bgColor105{
+    background-color: #dfdfdf;
+    color:#32893d;
+  }
+  #bgColor106{
+    background-color: #dfdfdf;
+    color:#d67cbe;
+  }
+  #bgColor107{
+    background-color: #dfdfdf;
+    color:#cc7d00;
+  }

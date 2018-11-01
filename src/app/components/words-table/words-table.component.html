@@ -1,0 +1,16 @@
+
+<ngx-spinner
+bdColor = "rgba(51,51,51,0.2)"
+size = "large"
+color = "#fff"
+type = "ball-spin"
+></ngx-spinner>
+
+
+<table>
+    <tr *ngFor="let arr of words; let idx1 = index">           
+        <td [ngStyle]="{'width': tableWidth}" id=bgColor{{gameService.revealedMap[idx1][idx2]}} *ngFor="let w of arr; let idx2 = index" (click)="reveal(w)">
+            {{w}}
+        </td>
+    </tr>   
+</table>

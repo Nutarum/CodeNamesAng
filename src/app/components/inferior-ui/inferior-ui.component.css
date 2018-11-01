@@ -1,0 +1,14 @@
+
+#bottomUI{
+    display: flex;
+    justify-content: space-between;
+
+    
+      
+}
+
+#bottomUI2{
+    display: block;
+    width: 100%;
+    text-align: right;
+}

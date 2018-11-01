@@ -1,0 +1,9 @@
+<div id="topUI">
+    <label id="remaining"> Remaining: <label style="font-size: 24px" id="fontColor{{idx+gameService.startingTeamOffset}}" *ngFor="let r of gameService.remaining; let idx = index"> {{r}} </label>    </label>
+    
+    
+    <label *ngIf="gameService.winner==-1" class="turn" id="fontColor{{gameService.turn+gameService.startingTeamOffset}}"> {{gameService.timer}} </label>
+    <label *ngIf="gameService.winner>-1" class="turn" id="fontColor{{gameService.winner+gameService.startingTeamOffset}}"> WINNERS! </label>
+  
+    <button (click)="endTurn()">End turn</button> <!-- boton para pasar turno -->
+  </div>

@@ -1,0 +1,35 @@
+#remaining{
+    font-weight: bold;
+}
+#remainingRed{
+    color: #bf2828;
+    font-weight: bold;
+}
+#remainingBlue{
+    color: #437cd8;
+    font-weight: bold; 
+}
+.turn{    
+    font-weight: bold;
+    font-size: large;
+}
+#topUI{
+    display: flex;
+    justify-content: space-between;
+}
+
+#fontColor3{
+    color:#437cd8;
+  }
+    #fontColor4{
+    color:#bf2828;
+  }
+  #fontColor5{
+    color:#32893d;
+  }
+  #fontColor6{
+    color:#d67cbe;
+  }  
+  #fontColor7{
+    color:#cc7d00;
+  }
