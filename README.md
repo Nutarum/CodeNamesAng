@@ -28,9 +28,9 @@ firebase deploy
 ## >>> ABOUT THE DATABASE <<<
 <pre>
 this project is using a firebase database whit 3 collections  
-	- Games<br />
+	- Games  
 		*this collection will auto populate  
-	- Snake<br />
+	- Snake  
 		* 10 documents whit names from 1 to 10, containing:  
 			. a number called id, value same as document names  
 			. a string called name, value doesnt matter  
