@@ -1,0 +1,12 @@
+#canvasContainer{
+    position: absolute;
+   left: 20px;
+   top: 20px;
+  
+}
+#scoreContainer{
+   position: absolute;
+   left: 340px;
+   top: 20px;    
+  
+}

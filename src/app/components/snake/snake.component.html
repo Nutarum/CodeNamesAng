@@ -1,0 +1,14 @@
+
+<div id="canvasContainer">    
+    <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+    </canvas>
+    <br/>
+    <span id="SCORETXT"> SCORE: 4</span>
+    <br/>
+  </div >
+  <div id="scoreContainer">
+    <div  *ngFor="let record of snakeRecordsLocal">
+      {{record.name}}: {{record.score}}
+    </div>
+    </div>
+  

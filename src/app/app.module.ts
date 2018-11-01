@@ -18,13 +18,25 @@ import { AngularFireDatabaseModule  } from 'angularfire2/database';
 import { SuperiorUIComponent } from './components/superior-ui/superior-ui.component';
 import { InferiorUIComponent } from './components/inferior-ui/inferior-ui.component';
 import { WordsTableComponent } from './components/words-table/words-table.component';
+import { SnakeComponent } from './components/snake/snake.component';
+import { CodenamesComponent } from './components/codenames/codenames.component';
+
+
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes = [
+  { path: 'snake', component: SnakeComponent },
+  { path: '', component: CodenamesComponent },
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SuperiorUIComponent,
     InferiorUIComponent,
-    WordsTableComponent
+    WordsTableComponent,
+    SnakeComponent,
+    CodenamesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +45,11 @@ import { WordsTableComponent } from './components/words-table/words-table.compon
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule ,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+
+    RouterModule.forRoot(
+      appRoutes     
+    )
    
   ],
   providers: [],

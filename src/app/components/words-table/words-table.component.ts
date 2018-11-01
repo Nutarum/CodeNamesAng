@@ -205,9 +205,9 @@ export class WordsTableComponent implements OnInit {
   }
 
   //cuando se hace click en una casilla, se pone en true en la BD
-  reveal(w: string) {   
+  reveal(w: string) {
     if (this.confirmWords) {
-      if (!confirm("Reveal: " + w)) {
+      if (!confirm("Reveal " + this.words.find[w])) {
         return;
       }
     }
