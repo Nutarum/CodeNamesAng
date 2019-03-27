@@ -14,7 +14,7 @@ import { Observable } from 'rxjs'
 })
 export class SnakeComponent implements OnInit {
   public funcionKeydownInterna: Function;
-
+  public funcionClickInterna: Function;
 
   db: AngularFirestore;
 
@@ -37,6 +37,11 @@ export class SnakeComponent implements OnInit {
         }
       })       
     });
+  }
+
+  @HostListener('window:mousedown', ['$event'])
+  onMousedown(event) {
+    this.funcionClickInterna(event);
   }
 
   @HostListener("window:keydown", ['$event'])
@@ -82,8 +87,8 @@ export class SnakeComponent implements OnInit {
         var pasoTemporal = true;
         var cdAparicion = 0;
 
-        var lastVX;
-        var lastVY;
+        var lastVX = vx;
+        var lastVY = vy;
 //endregion
 
       	
@@ -114,6 +119,8 @@ export class SnakeComponent implements OnInit {
             document.getElementById("SCORETXT").innerHTML = "SCORE: " + score;
             vx = 1;
             vy = 0;
+            lastVX = vx;
+            lastVY = vy;
             x = 14;
             y = 14;
 
@@ -209,9 +216,81 @@ export class SnakeComponent implements OnInit {
                     vx = -1;
                     vy = 0;
                 }
+            } else if (event.key == 'q' || event.key == '1') {
+                if (lastVY==-1) {
+                    vx = -1;
+                    vy = 0;
+                }else if(lastVY==1){
+                    vx = 1;
+                    vy = 0;
+                }else if(lastVX==1){
+                    vx = 0;
+                    vy = -1;
+                }else{
+                    vx = 0;
+                    vy = 1;
+                }
+            } else if (event.key == 'e' || event.key == '2') {
+                if (lastVY==-1) {
+                    vx = 1;
+                    vy = 0;
+                }else if(lastVY==1){
+                    vx = -1;
+                    vy = 0;
+                }else if(lastVX==1){
+                    vx = 0;
+                    vy = 1;
+                }else{
+                    vx = 0;
+                    vy = -1;
+                }
             }
         }
+
+        function scriptClick(event) {
+            if (pasoTemporal == false) {
+                pasoTemporal = true;
+                if (cerezaTemporal == 0) {
+                    eraseBody(x, y)
+                    drawObjeto(x, y, 0)
+                }
+            }
+
+            if(event.clientX < 100){
+                if (lastVY==-1) {
+                    vx = -1;
+                    vy = 0;
+                }else if(lastVY==1){
+                    vx = 1;
+                    vy = 0;
+                }else if(lastVX==1){
+                    vx = 0;
+                    vy = -1;
+                }else{
+                    vx = 0;
+                    vy = 1;
+                }
+            }else if(event.clientX < 220){
+
+            }else{
+                if (lastVY==-1) {
+                    vx = 1;
+                    vy = 0;
+                }else if(lastVY==1){
+                    vx = -1;
+                    vy = 0;
+                }else if(lastVX==1){
+                    vx = 0;
+                    vy = 1;
+                }else{
+                    vx = 0;
+                    vy = -1;
+                }
+            }    
+        }
         this.funcionKeydownInterna = scriptKeyDown;
+        this.funcionClickInterna = scriptClick;
+
 
         function moverSerpiente() {
 
